@@ -1,4 +1,3 @@
-// path: components/ProductList.tsx
 "use client";
 
 import { useEffect, useState } from "react";
@@ -14,7 +13,7 @@ type Product = {
   title: string;
   price: number;
   image: string;
-  quantity?: number; 
+  quantity?: number;
 };
 
 export default function ProductList() {
@@ -23,7 +22,7 @@ export default function ProductList() {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const { addToCart } = useCartStore();
-  const { addToFavorites, removeFromFavorites, favorites } = useFavoriteStore(); // Fix: Import favorites store
+  const { addToFavorites, removeFromFavorites, favorites } = useFavoriteStore();
   const [quantities, setQuantities] = useState<{ [key: number]: number }>({});
 
   useEffect(() => {
@@ -48,7 +47,6 @@ export default function ProductList() {
     }));
   };
 
-  // Toggle favorite function
   const handleFavoriteToggle = (product: Product) => {
     const isFavorite = favorites.some((fav) => fav.id === product.id);
     if (isFavorite) {
@@ -62,7 +60,6 @@ export default function ProductList() {
     const quantity = quantities[product.id] || 1;
     addToCart({ ...product, quantity });
   };
-  
 
   const filteredProducts = products.filter((product) =>
     product.title.toLowerCase().includes(searchQuery.toLowerCase())
@@ -72,7 +69,7 @@ export default function ProductList() {
   if (error) return <p className="text-center text-red-500">{error}</p>;
 
   return (
-    <div className="p-6" >
+    <div className="p-6">
       <div className="mb-6 flex justify-center">
         <input
           type="text"
@@ -91,30 +88,33 @@ export default function ProductList() {
             const isFavorite = favorites.some((fav) => fav.id === product.id);
             return (
               <div key={product.id} className="relative bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md flex flex-col items-center">
-                <Image 
-                  src={product.image} 
-                  alt={product.title} 
-                  width={200} 
-                  height={200} 
+                <Image
+                  src={product.image}
+                  alt={product.title}
+                  width={200}
+                  height={200}
                   className="md:w-full md:h-40 w-[50%] h-20 object-contain"
                 />
 
-                <h3 className="text-lg font-semibold mt-3 text-center">{product.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300 text-lg font-medium">${product.price.toFixed(2)}</p>
+                <h3 className="text-xs md:text-lg font-semibold mt-3 text-center truncate max-w-[80%]">{product.title}</h3>
+                <p className="text-gray-600 dark:text-gray-300 text-sm md:text-lg font-medium">${product.price.toFixed(2)}</p>
 
-                <div className="flex justify-between items-center w-full mt-3 bottom-0">
+                {/* Quantity Counter and Buttons Container */}
+                <div className="flex flex-col md:flex-row justify-between items-center w-full mt-3">
+                  {/* Quantity Counter */}
                   <div className="flex items-center space-x-2 bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded-full">
                     <button onClick={() => updateQuantity(product.id, -1)} className="p-1">
                       <FiMinus className="text-gray-700 dark:text-white" />
                     </button>
-                    <span className="text-lg font-semibold">{quantities[product.id] || 1}</span>
+                    <span className="text-sm md:text-lg font-semibold">{quantities[product.id] || 1}</span>
                     <button onClick={() => updateQuantity(product.id, 1)} className="p-1">
                       <FiPlus className="text-gray-700 dark:text-white" />
                     </button>
                   </div>
 
-                  <div className="flex space-x-3">
-                    {/* Favorite Button - Fixed */}
+                  {/* Favorite and Cart Buttons */}
+                  <div className="flex space-x-3 pt-4 md:pt-0">
+                    {/* Favorite Button */}
                     <button onClick={() => handleFavoriteToggle(product)} className="p-2">
                       {isFavorite ? (
                         <AiFillHeart className="text-red-500 text-xl" />
@@ -124,7 +124,7 @@ export default function ProductList() {
                     </button>
 
                     {/* Add to Cart Button */}
-                    <button 
+                    <button
                       className="p-2 bg-orange-500 rounded-full text-white hover:bg-orange-600"
                       onClick={() => handleAddToCart(product)}
                     >

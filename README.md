@@ -1,36 +1,123 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BlooStore E-Commerce Platform - Front-End Intern Challenge
 
-## Getting Started
+## Overview
 
-First, run the development server:
+This project is a simplified e-commerce platform built as part of the Front-End Software Engineer Intern practical challenge. It includes a **Product Listing Page**, **Cart Management**, and a **Checkout Page** with shipping details form. The application is built using **React (Next.js)**, **TypeScript**, and **Tailwind CSS**, and integrates with a mock API for product data.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 1. **Product Listing Page**
+   - Fetches and displays a list of products from the [FakeStore API](https://fakestoreapi.com/products).
+   - Each product includes an image, name, price, and an "Add to Cart" button.
+   - Responsive grid layout using **Tailwind CSS**.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 2. **Cart Management**
+   - Users can add and remove items from the cart.
+   - Dynamic display of the total price of selected items.
+   - Global state management using **Zustand**.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3. **Checkout Page**
+   - Displays selected items and the total amount.
+   - Includes a form for entering shipping details (Name, Address, Phone Number, Email).
+   - Basic form validation using **TypeScript**.
 
-## Learn More
+### 4. **API Integration**
+   - Fetches product data from the FakeStore API.
+   - Handles loading states and error scenarios gracefully.
 
-To learn more about Next.js, take a look at the following resources:
+### 5. **Bonus Features**
+   - **Dark Mode**: Implemented using Tailwind CSS.
+   - **Search Bar**: Allows users to filter products dynamically.
+   - **Confirmation Modal**: Displays a modal before finalizing the checkout.
+   - **Local Storage**: Persists cart data across page reloads.
+   - **Deployment**: The project is deployed on **Vercel**.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Technologies Used
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **React (Next.js)**: Framework for building the application.
+- **TypeScript**: Ensures type safety and improves code quality.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **Zustand**: Lightweight state management library.
+- **FakeStore API**: Provides mock product data.
+- **Vercel**: Deployment platform for hosting the application.
 
-## Deploy on Vercel
+## Installation
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To run this project locally, follow these steps:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/Jclinch/BlooStores.git
+   cd e-commerce-platform
+   ```
+
+2. **Install dependencies**:
+   ```bash
+     yarn install
+   ```
+
+3. **Run the development server**:
+   ```bash
+     yarn dev
+   ```
+
+4. **Open the application**:
+   Visit `http://localhost:3000` in your browser.
+
+## Deployment
+
+The application is deployed on **Vercel**. You can access it here:  
+[Live Demo](https://e-commerce-platform.vercel.app)
+
+
+## Evaluation Criteria
+
+- **Code Quality & Structure**: Clean, readable, and well-organized code.
+- **Functionality & Completeness**: Implementation of all required features.
+- **User Experience (UI/UX)**: Responsive, visually appealing, and intuitive design.
+- **Performance & Optimization**: Efficient API handling and state management.
+- **Error Handling & Validation**: Graceful handling of edge cases.
+
+## Submission
+
+- **GitHub Repository**: [BlooStores](https://github.com/Jclinch/BlooStores.git)
+- **Deployed Link**: [Live Demo](https://e-commerce-platform.vercel.app)
+- **Contact Email**: sunnyugwu2011@gmail.com
+
+---
+
+## Screenshots
+
+### Product Listing Page
+![Product Listing Page](/ss/mProdLite.png)
+![Product Listing Page](/ss/mProdDark.png)
+
+### Cart Page
+![Cart Page](/ss/mCartLite.png)
+![Cart Page](/ss/mCartDark.png)
+
+### Checkout Page
+![Checkout Page](/ss/checkout.png)
+
+### Dark Mode
+![Dark Mode](/ss/dark-mode.png)
+
+---
+
+## License
+
+This project is licensed under Sunny Ugwu
+
+---
+
+## Acknowledgments
+
+- [FakeStore API](https://fakestoreapi.com) for providing mock product data.
+- [Tailwind CSS](https://tailwindcss.com) for the utility-first CSS framework.
+- [Zustand](https://zustand-demo.pmnd.rs) for lightweight state management.
+
+---
+
+Thank you for reviewing my submission! I look forward to your feedback.
+
+---
