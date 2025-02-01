@@ -102,11 +102,7 @@
 //   );
 // }
 
-
-
 //...................
-
-
 
 // "use client";
 
@@ -219,7 +215,6 @@
 
 //
 
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -247,7 +242,9 @@ export default function TopBar() {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await axios.get("https://fakestoreapi.com/products/categories");
+        const response = await axios.get(
+          "https://fakestoreapi.com/products/categories"
+        );
         setCategories(response.data);
       } catch (error) {
         console.error("Error fetching categories:", error);
@@ -267,7 +264,9 @@ export default function TopBar() {
         {/* Logo */}
         <div className="flex items-center">
           <Link href="/">
-            <span className="text-xl font-bold text-orange-500 dark:text-orange-500">BlooStores</span>
+            <span className="text-xl font-bold text-orange-500 dark:text-orange-500">
+              BlooStores
+            </span>
           </Link>
         </div>
 
@@ -288,7 +287,10 @@ export default function TopBar() {
         {/* Icons */}
         <div className="flex items-center space-x-4">
           {/* Favorites Button */}
-          <button className="text-black dark:text-white relative" onClick={() => setIsFavoritesOpen(true)}>
+          <button
+            className="text-black dark:text-white relative"
+            onClick={() => setIsFavoritesOpen(true)}
+          >
             <FaHeart className="text-xl" />
             {favorites.length > 0 && (
               <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full px-1.5 py-0.5">
@@ -303,7 +305,10 @@ export default function TopBar() {
           </button>
 
           {/* Cart Button */}
-          <button className="text-black dark:text-white relative" onClick={() => setIsCartOpen(true)}>
+          <button
+            className="text-black dark:text-white relative"
+            onClick={() => setIsCartOpen(true)}
+          >
             <FaShoppingCart className="text-xl" />
             {cart.length > 0 && (
               <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full px-1.5 py-0.5">
@@ -318,7 +323,9 @@ export default function TopBar() {
       </div>
 
       {/* Favorites Modal */}
-      {isFavoritesOpen && <FavoriteProducts onClose={() => setIsFavoritesOpen(false)} />}
+      {isFavoritesOpen && (
+        <FavoriteProducts onClose={() => setIsFavoritesOpen(false)} />
+      )}
 
       {/* Cart Modal */}
       {isCartOpen && (

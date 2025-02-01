@@ -1,33 +1,3 @@
-// // path : app/layout.tsx
-// import type { Metadata } from "next";
-// import "./globals.css";
-// import ThemeToggle from "@/components/ThemeToggle";
-// import CartInitializer from "@/components/CartInitializer";
-
-
-
-// export const metadata: Metadata = {
-//   title: "Bloostores",
-//   description: "Your friendly neighbourhood store",
-// };
-
-// export default function RootLayout({ children }: { children: React.ReactNode }) {
-//   return (
-//     <html lang="en">
-//       <body className="bg-gray-100 dark:bg-gray-900 text-black dark:text-white">
-//         <ThemeToggle />
-//         <CartInitializer /> {/* 👈 This ensures the cart is loaded from localStorage */}
-//         {children}
-//       </body>
-//     </html>
-//   );
-// }
-
-
-
-//.............
-
-
 import type { Metadata } from "next";
 import "./globals.css";
 import CartInitializer from "@/components/CartInitializer";
@@ -43,7 +13,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className="bg-gray-100 dark:bg-gray-900 text-black dark:text-white">
         <CartInitializer />
-        <TopBar /> {/* Ensure the TopBar appears on all pages */}
+        <TopBar />
         {children}
       </body>
     </html>

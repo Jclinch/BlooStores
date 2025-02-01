@@ -28,14 +28,14 @@ export const useFavoriteStore = create<FavoriteStore>((set) => {
     addToFavorites: (product) =>
       set((state) => {
         const updatedFavorites = [...state.favorites, product];
-        localStorage.setItem("favorites", JSON.stringify(updatedFavorites)); // ✅ Persist
+        localStorage.setItem("favorites", JSON.stringify(updatedFavorites)); 
         return { favorites: updatedFavorites };
       }),
 
     removeFromFavorites: (id) =>
       set((state) => {
         const updatedFavorites = state.favorites.filter((item) => item.id !== id);
-        localStorage.setItem("favorites", JSON.stringify(updatedFavorites)); // ✅ Persist
+        localStorage.setItem("favorites", JSON.stringify(updatedFavorites)); 
         return { favorites: updatedFavorites };
       }),
   };

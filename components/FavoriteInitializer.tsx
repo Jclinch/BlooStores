@@ -13,5 +13,5 @@ export default function FavoriteInitializer() {
         }
     }, [])
 
-    return null // No UI, just runs the effect
+    return null 
     }

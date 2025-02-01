@@ -48,7 +48,7 @@ To run this project locally, follow these steps:
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/Jclinch/BlooStores.git
-   cd e-commerce-platform
+   cd blooStores
    ```
 
 2. **Install dependencies**:
@@ -89,24 +89,24 @@ The application is deployed on **Vercel**. You can access it here:
 ## Screenshots
 
 ### Product Listing Page
-![Product Listing Page](/ss/mProdLite.png)
-![Product Listing Page](/ss/mProdDark.png)
+![Product Listing Page](public/images/ss/mProdLite.png)
+![Product Listing Page](public/images/ss/mProdDark.png)
 
 ### Cart Page
-![Cart Page](/ss/mCartLite.png)
-![Cart Page](/ss/mCartDark.png)
+![Cart Page](public/images/ss/mCartLite.png)
+![Cart Page](public/images/ss/mCartDark.png)
 
 ### Checkout Page
-![Checkout Page](/ss/checkout.png)
+![Checkout Page](public/images/ss/checkout.png)
 
 ### Dark Mode
-![Dark Mode](/ss/dark-mode.png)
+![Dark Mode](public/images/ss/dark-mode.png)
 
 ---
 
 ## License
 
-This project is licensed under Sunny Ugwu
+This project is licensed by Sunny Ugwu
 
 ---
 
