@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import CartInitializer from "@/components/CartInitializer";
 import TopBar from "@/components/TopBar";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Bloostores",
@@ -15,6 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <CartInitializer />
         <TopBar />
         {children}
+        <Footer />
       </body>
     </html>
   );
