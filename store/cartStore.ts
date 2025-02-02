@@ -1,3 +1,5 @@
+// path :  store/cartStore.ts
+
 import { create } from "zustand";
 
 type CartItem = {
@@ -23,7 +25,7 @@ export const useCartStore = create<CartState>((set) => ({
     set((state) => {
       const existingItem = state.cart.find((item) => item.id === newItem.id);
       let updatedCart;
-      
+
       if (existingItem) {
         // Update quantity if item already exists
         updatedCart = state.cart.map((item) =>
@@ -36,6 +38,10 @@ export const useCartStore = create<CartState>((set) => ({
 
       const updatedTotalPrice = updatedCart.reduce((total, item) => total + item.price * item.quantity, 0);
 
+      // Save to localStorage
+      localStorage.setItem("cart", JSON.stringify(updatedCart));
+      localStorage.setItem("totalPrice", JSON.stringify(updatedTotalPrice));
+
       return { cart: updatedCart, totalPrice: updatedTotalPrice };
     }),
 
@@ -43,6 +49,11 @@ export const useCartStore = create<CartState>((set) => ({
     set((state) => {
       const updatedCart = state.cart.filter((item) => item.id !== id);
       const updatedTotalPrice = updatedCart.reduce((total, item) => total + item.price * item.quantity, 0);
+
+      // Save to localStorage
+      localStorage.setItem("cart", JSON.stringify(updatedCart));
+      localStorage.setItem("totalPrice", JSON.stringify(updatedTotalPrice));
+
       return { cart: updatedCart, totalPrice: updatedTotalPrice };
     }),
 }));

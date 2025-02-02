@@ -1,5 +1,6 @@
-// path: components/CartInitializer.tsx
-"use client"; 
+// // path: components/CartInitializer.tsx
+
+"use client";
 import { useEffect } from "react";
 import { useCartStore } from "@/store/cartStore";
 
@@ -18,5 +19,5 @@ export default function CartInitializer() {
     }
   }, []);
 
-  return null; 
+  return null;
 }
