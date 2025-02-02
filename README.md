@@ -48,7 +48,7 @@ To run this project locally, follow these steps:
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/Jclinch/BlooStores.git
-   cd blooStores
+   cd bloostores
    ```
 
 2. **Install dependencies**:
@@ -67,7 +67,7 @@ To run this project locally, follow these steps:
 ## Deployment
 
 The application is deployed on **Vercel**. You can access it here:  
-[Live Demo](https://e-commerce-platform.vercel.app)
+[Live Demo](https://bloostores.vercel.app/)
 
 
 ## Evaluation Criteria
@@ -81,7 +81,7 @@ The application is deployed on **Vercel**. You can access it here:
 ## Submission
 
 - **GitHub Repository**: [BlooStores](https://github.com/Jclinch/BlooStores.git)
-- **Deployed Link**: [Live Demo](https://e-commerce-platform.vercel.app)
+- **Deployed Link**: [Live Demo](https://bloostores.vercel.app/)
 - **Contact Email**: sunnyugwu2011@gmail.com
 
 ---
@@ -115,6 +115,19 @@ This project is licensed by Sunny Ugwu
 - [FakeStore API](https://fakestoreapi.com) for providing mock product data.
 - [Tailwind CSS](https://tailwindcss.com) for the utility-first CSS framework.
 - [Zustand](https://zustand-demo.pmnd.rs) for lightweight state management.
+
+---
+
+### Note on Future Enhancements
+Due to prior commitments, including preparations and participation at Household of David's annual Mercy Conference '25, I was unable to implement additional features that would further enhance the e-commerce platform. Some of these planned features include:
+
+Product Details Page: A dedicated page to display individual products with comprehensive details such as descriptions, reviews, and related products.
+
+User Authentication: Secure login and registration functionality to enable personalized user experiences.
+
+Order History: A feature allowing users to view their past orders and track their status.
+
+These features are part of the roadmap for future development and would significantly improve the platform's functionality and user experience.
 
 ---
 
